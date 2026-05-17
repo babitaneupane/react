@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const Fetch = () => {
-    const api = fetch("https://fakestoreapi.com/products/1");
-    const res =await api.json();
-    console.log(res);
-  return 
-    <div>Fetch</div>;
-  
+  useEffect(() => {
+    async function fetchproducts() {
+      const response = await fetch('https://fakestoreapi.com/products/1');
+      const data = await response.json();
+      console.log(data);
+    
+
+  }
+  fetchproducts();
+},[]);
+  return (
+  <>
+  <div>hello  </div>
+  </>
+  );
 };
 
 export default Fetch;
