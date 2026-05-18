@@ -1,24 +1,45 @@
 import React from 'react'
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { IoLogoTiktok } from "react-icons/io5";
 
-export const Footer = () => {
+
+const Footer = () => {
   return (
-    <footer className="bg-gray-500 text-white py-1 mt-10 padding-0,0,100px,0"> 
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between ">
-        
-        <h1 className="text-xl font-bold mb-4 md:mb-0">
-          MyWebsite
-        </h1>
-
-        <ul className="flex gap-1 text-gray-100">
-          <li className="hover:text-white cursor-pointer">Home</li>
-          <li className="hover:text-white cursor-pointer">About</li>
-          <li className="hover:text-white cursor-pointer">Contact</li>
-        </ul>
-
-        <p className="text-gray-400 mt-4 md:mt-0">
-          © 2026 All Rights Reserved
-        </p>
+    <>           
+      <div className='bg-gray-400 py-6 px-auto text-center text-white'>
+        powered  by Inovex Media and Tech Pvt.Ltd.
+      </div>    
+      <div className='bg-gray-400 py-6 px-auto text-center text-white'>
+        © 2024 All rights reserved.
       </div>
-    </footer>
+      
+     <div className='bg-gray-400 py-6 px-auto text-center text-white flex items-center justify-center gap-4'>
+      <div className='py-6 text-center cursor-pointer text-black flex items-center justify-center gap-2'>
+  <CiFacebook size={24} />
+  
+</div>
+   <div className='py-6 text-center cursor-pointer text-black flex items-center justify-center gap-2'>
+  <FaInstagramSquare size={24} />
+  
+</div>
+   <div className='py-6 text-center cursor-pointer text-black flex items-center justify-center gap-2'>
+  <FaLinkedin size={24} />
+  
+</div>
+   <div className='py-6 text-center cursor-pointer text-black flex items-center justify-center gap-2'>
+  <FaGithub size={24} />
+  
+</div>
+   <div className='py-6 text-center cursor-pointer text-black flex items-center justify-center gap-2'>
+  <IoLogoTiktok size={24} />
+  
+</div>
+     </div>
+    </>
   )
 }
+
+export default Footer

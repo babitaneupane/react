@@ -4,17 +4,34 @@ import React from "react";
 import UseEffectHook from "./Components/useeffecthook";
 import Fetch from "./Components/Fetch";
 import Navbar from "./Navbar";
-import Hero from "./Components/Hero";
-import { Footer } from "./Components/Footer";
+//import Hero from "./Components/Hero";
+import Footer  from "./Components/Footer";
+import Fetch2 from "./Fetch2";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
+
+
 function App() {
   return (
     <>
+    <BrowserRouter>
      {/* <Counter /> */}
-     {/* <Fetch /> */}
+      {/* <Fetch2 /> */}
      {/* <UseEffectHook /> */}
+      {/* <Hero />} */} 
       <Navbar />
-  <Hero />
-  <Footer/>
+  
+  
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/about" element={<About />} />
+  </Routes>
+     
+  <Footer />
+  </BrowserRouter>
     </>
   );
 }
